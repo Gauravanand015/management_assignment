@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+
+  <body>
+    <h1>Dashboard</h1>
+    <div id="container">
+      <form id="dashBoardForm">
+        <input
+          type="text"
+          placeholder="Enter first name"
+          id="firstname"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Enter last name"
+          id="lastname"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Enter email"
+          id="employee_email"
+          required
+        />
+        <select id="department">
+          <option value="">Select department</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Tech">Tech</option>
+          <option value="Operations">Operations</option>
+        </select>
+        <input
+          type="number"
+          placeholder="enter Salary"
+          id="employee_salary"
+          required
+        />
+
+        <input type="submit" value="Add Employee" />
+      </form>
+    </div>
+
+    <select id="sortbySalary">
+      <option value="">Sorting</option>
+      <option value="1">Low to High</option>
+      <option value="-1">High to Low</option>
+    </select>
+
+    <select id="filter">
+      <option value="">Filter by department</option>
+      <option value="Operations">Operations</option>
+      <option value="Tech">Tech</option>
+      <option value="Marketing">Marketing</option>
+    </select>
+
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Salary</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Append your table rows here -->
+      </tbody>
+    </table>
+
+    <!-- for editing the employee information -->
+    <div id="modal" class="modal">
+      <form action="" id="modalForm">
+        <input
+          type="text"
+          id="modal_firstName"
+          placeholder="First Name"
+          required
+        /><br />
+
+        <input
+          type="text"
+          id="modal_lastName"
+          placeholder="Last Name"
+          required
+        /><br />
+
+        <input
+          type="email"
+          id="modal_email"
+          placeholder="Email"
+          required
+        /><br />
+
+        <select id="model_department">
+          <option value="">Select department</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Tech">Tech</option>
+          <option value="Operations">Operations</option>
+        </select>
+
+        <input
+          type="text"
+          id="modal_salary"
+          placeholder="Salary"
+          required
+        /><br />
+
+        <button type="submit">Update</button>
+
+        <button id="close_modal">Close</button>
+      </form>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+  </body>
+  <script src="./scripts/dashboard.js"></script>
+</html>
